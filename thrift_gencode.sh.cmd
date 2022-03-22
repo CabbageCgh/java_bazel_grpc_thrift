@@ -1,0 +1,1 @@
+thrift --gen java -out /Users/cabbage/workspace/compass/java_bazel_grpc_thrift/src/main/java /Users/cabbage/workspace/compass/java_bazel_grpc_thrift/src/main/thrift/hello.thrift

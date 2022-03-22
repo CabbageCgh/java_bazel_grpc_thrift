@@ -11,15 +11,26 @@ http_archive(
 )
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
+
+
 maven_install(
     artifacts = [
         "com.google.code.gson:gson:2.9.0",
         "org.slf4j:slf4j-api:1.7.36",
         "javax.annotation:javax.annotation-api:1.3.2",
         "org.apache.thrift:libthrift:0.16.0",
+        "io.grpc:grpc-api:1.45.0",
+        "io.grpc:grpc-stub:1.45.0",
+        "io.grpc:grpc-netty-shaded:1.45.0"
     ],
     repositories = [
         "https://repo1.maven.org/maven2"
     ]
 )
+
+#load("@io_grpc_grpc_java//:repositories.bzl", "IO_GRPC_GRPC_JAVA_ARTIFACTS", "IO_GRPC_GRPC_JAVA_OVERRIDE_TARGETS", "grpc_java_repositories")
+#load("@maven//:compat.bzl", "compat_repositories")
+
+#compat_repositories()
+#grpc_java_repositories()
 
